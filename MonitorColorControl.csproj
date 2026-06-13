@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>MonitorColorControl</AssemblyName>
+    <RootNamespace>MonitorColorControl</RootNamespace>
+    <Version>1.0.0</Version>
+    <Authors>Samuel Kozelsky</Authors>
+    <Description>Advanced monitor color control application for Windows</Description>
+    <PackageProjectUrl>https://github.com/kozelskysamuellll/MonitorColorControl</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/kozelskysamuellll/MonitorColorControl</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PublishTrimmed>true</PublishTrimmed>
+    <PublishSingleFile>true</PublishSingleFile>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>false</SelfContained>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- NuGet Dependencies -->
+    <PackageReference Include="System.Drawing.Common" Version="8.0.0" />
+    <PackageReference Include="System.Diagnostics.EventLog" Version="8.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+</Project>
