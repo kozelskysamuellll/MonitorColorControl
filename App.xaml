@@ -1,0 +1,77 @@
+<Application x:Class="MonitorColorControl.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MonitorColorControl"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <!-- Dark Theme Colors -->
+        <Color x:Key="PrimaryBackgroundColor">#1E1E1E</Color>
+        <Color x:Key="SecondaryBackgroundColor">#2D2D2D</Color>
+        <Color x:Key="TertiaryBackgroundColor">#3F3F3F</Color>
+        <Color x:Key="AccentColor">#00A0F0</Color>
+        <Color x:Key="AccentDarkColor">#0078D4</Color>
+        <Color x:Key="ForegroundColor">#FFFFFF</Color>
+        <Color x:Key="SecondaryForegroundColor">#B0B0B0</Color>
+        <Color x:Key="SuccessColor">#28A745</Color>
+        <Color x:Key="WarningColor">#FFC107</Color>
+        <Color x:Key="DangerColor">#DC3545</Color>
+
+        <!-- Brushes -->
+        <SolidColorBrush x:Key="PrimaryBackgroundBrush" Color="#1E1E1E" />
+        <SolidColorBrush x:Key="SecondaryBackgroundBrush" Color="#2D2D2D" />
+        <SolidColorBrush x:Key="TertiaryBackgroundBrush" Color="#3F3F3F" />
+        <SolidColorBrush x:Key="AccentBrush" Color="#00A0F0" />
+        <SolidColorBrush x:Key="ForegroundBrush" Color="#FFFFFF" />
+        <SolidColorBrush x:Key="SecondaryForegroundBrush" Color="#B0B0B0" />
+
+        <!-- Styles -->
+        <Style TargetType="Window">
+            <Setter Property="Background" Value="#1E1E1E" />
+            <Setter Property="Foreground" Value="#FFFFFF" />
+            <Setter Property="FontFamily" Value="Segoe UI" />
+            <Setter Property="FontSize" Value="12" />
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#0078D4" />
+            <Setter Property="Foreground" Value="#FFFFFF" />
+            <Setter Property="Padding" Value="12,8" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="FontWeight" Value="Medium" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="#0078D4" CornerRadius="4" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#106EBE" />
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#0066B2" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="Slider">
+            <Setter Property="Height" Value="32" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#FFFFFF" />
+            <Setter Property="FontFamily" Value="Segoe UI" />
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="#FFFFFF" />
+            <Setter Property="FontFamily" Value="Segoe UI" />
+        </Style>
+
+    </Application.Resources>
+</Application>
